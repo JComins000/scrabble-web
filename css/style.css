@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    background-color: #fed;
+    font-family: 'Roboto', sans-serif;
+}
+table {
+    margin: 0 auto;
+    border-spacing: 0;
+}
+input {
+    font-family: inherit;
+}
+input::-webkit-input-placeholder {
+   color: #f8f0e8;
+   opacity: .5;
+}
+td {
+    padding: 0;
+}
+div.contain {
+    display: block;
+    border: 25px solid transparent;;
+    text-align: center;
+}
+table.contain {
+    margin-top: 23px;
+}
+.btn {
+    margin-left: 23px;
+    border: none;
+    padding: 0 auto;
+    width: 80px;
+    height: 80px;
+    font-size: 50px;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: #e7e7e7;
+    color: #222;
+    border-color: #999;
+    border-style: solid;
+    text-align: center;
+}
+.tile {
+    padding: 0;
+    text-align: center;
+    color: black;
+    background-color: #f8f0e8;
+    font-weight: 500;
+}
+.tile:focus {
+    outline:0;
+}
+.tile::selection {
+    background: #cff;
+}
+.bonus {
+    color: #f8f0e8;
+    font-weight: 700;
+}
+.red {background-color: #f88;}
+.rred{background-color: #f44;}
+.blue{background-color: #88f;}
+.bblue{background-color: #44f;}
+.center{
+    background-image: url(../img/star.png);
+    background-position: center;
+    background-size: 100%;
+    color: black;
+    background-repeat: no-repeat;
+}
+tr td .blank{
+    text-shadow: 2px 2px #888;
+    font-weight: 900
+}
+
+#rack {
+    border-spacing: 5px 0;
+    margin: 0 -5px;
+}
+#rack tr {
+    display: block;
+    padding: 10px 15px 10px;
+    background-color: #964;
+    border-radius: 10px;
+}
+#rack td { 
+    padding: 5px;
+    background-color: #483018;
+    border-radius: 3px;
+}
+#rack input {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    margin: 0;
+    border-width: 0px;
+}
+#board {
+    border-spacing: 0;
+    padding: 10px 10px 13px;
+    background-color: #b98;
+    border-radius: 3px;
+}
+#board tr {
+    display: block;
+    padding: 0 0 3px 3px;
+    margin: 0 auto -3px;
+    background-color: #483018;
+    border-radius: 3px;
+}
+#board td { 
+    padding: 3px 3px 0 0;
+}
+#board input {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    margin: 0;
+    border-width: 0px;
+}
+.btn:hover{
+position: relative;
+}
+.btn[title]:hover:after{
+    content: attr(title);
+    padding: 8px 12px;
+    color: black;
+    position: absolute;
+    right: -3px;
+    bottom: 80px;
+    white-space: nowrap;
+    z-index: 1;
+    border-radius: 3px;
+    font-size: 16px;
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+    opacity: .8;
+}
