@@ -2,6 +2,7 @@
 <html>
 <head>
 <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,900' rel='stylesheet' type='text/css'>
+<link rel='stylesheet' type='text/css' href='https://necolas.github.io/normalize.css/4.1.1/normalize.css'>
 <link rel='stylesheet' type='text/css' href='css/style.css'>
 <link rel='icon' type='image/jpeg' href='img/star.png'>
 <script src='http://code.jquery.com/jquery-3.0.0.min.js'></script>
@@ -17,9 +18,13 @@
 </head>
 <body>
 <div class='contain'>
-    <table id='board'></table>
-    <table class='contain'><tr><td><table id='rack'></table></td>
-    <td><button id='toggle_dir' class='btn' title='Type direction: toggle with [space]'>►</button></td></tr></table>
+    <div id='board'></div>
+    <!-- <div class='contain'> -->
+	<div>
+		<div id='rack'></div>
+		<button id='toggle_dir' class='btn' title='Type direction: toggle with [space]'>►</button>
+	</div>
+    <!-- </div> -->
 </div>
 </body>
 </html>

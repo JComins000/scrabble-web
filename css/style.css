@@ -1,29 +1,21 @@
-body {
-    margin: 0;
-    background-color: #fed;
-    font-family: 'Roboto', sans-serif;
-}
-table {
-    margin: 0 auto;
-    border-spacing: 0;
-}
-input {
-    font-family: inherit;
-}
 input::-webkit-input-placeholder {
    color: #f8f0e8;
    opacity: .5;
 }
-td {
-    padding: 0;
+* {
+    font-family: 'Roboto', sans-serif;
+}*:focus {
+    outline:none;
 }
-div.contain {
-    display: block;
-    border: 25px solid transparent;;
-    text-align: center;
-}
-table.contain {
-    margin-top: 23px;
+.contain {/*
+    display: flex;
+    flex-direction: column;
+    justify-content: center;*/
+    padding: 20px;
+    background-color: #fed;
+}.contain > div {/*
+    display: flex;
+    flex-direction: row;*/
 }
 .btn {
     margin-left: 23px;
@@ -68,22 +60,22 @@ table.contain {
     color: black;
     background-repeat: no-repeat;
 }
-tr td .blank{
-    text-shadow: 2px 2px #888;
-    font-weight: 900
+div div .blank{
+    text-shadow: 1px 1px rgba(0,0,0,.5);
+    font-weight: 700;
 }
 
 #rack {
     border-spacing: 5px 0;
     margin: 0 -5px;
 }
-#rack tr {
+#rack > div {
     display: block;
     padding: 10px 15px 10px;
     background-color: #964;
     border-radius: 10px;
 }
-#rack td { 
+#rack > div > div { 
     padding: 5px;
     background-color: #483018;
     border-radius: 3px;
@@ -96,20 +88,26 @@ tr td .blank{
     border-width: 0px;
 }
 #board {
-    border-spacing: 0;
     padding: 10px 10px 13px;
     background-color: #b98;
     border-radius: 3px;
+    white-space: nowrap;
 }
-#board tr {
+#board > div {
     display: block;
-    padding: 0 0 3px 3px;
+    padding: 0 0 0 3px;
     margin: 0 auto -3px;
     background-color: #483018;
-    border-radius: 3px;
+    border-radius: 3px;/*
+    display: flex;
+    flex-direction: column;
+    justify-content: center;*/
 }
-#board td { 
-    padding: 3px 3px 0 0;
+#board > div > div { 
+    margin: 3px 3px -1px 0;
+    border-radius: 1px;
+    overflow: hidden;
+    display: inline-block;
 }
 #board input {
     width: 35px;
@@ -118,10 +116,10 @@ tr td .blank{
     margin: 0;
     border-width: 0px;
 }
-.btn:hover{
+.btn:hover {
 position: relative;
 }
-.btn[title]:hover:after{
+.btn[title]:hover:after {
     content: attr(title);
     padding: 8px 12px;
     color: black;

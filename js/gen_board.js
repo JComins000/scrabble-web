@@ -18,13 +18,11 @@ $(function() {
 		'type' : 'text',
 		'maxlength' : '1',
 	});
-	var $cell = $('<td>', {});
-	$cell.append($tile);
-	var $rack = $('<tr>', {});
+	var $square = $('<div>', {});
+	$square.append($tile);
 	for (var i = 0; i < rack_size; i++) {
-		$rack.append($cell.clone());
+		$('#rack').append($square.clone());
 	}
-	$('#rack').append($rack);
 	$('input:first').focus();
 
 	var $board_tile = $('<input>', {
@@ -61,10 +59,10 @@ $(function() {
 	board = [r1, r2, r3, r4, r5, r6, r7, r8, r7, r6, r5, r4, r3, r2, r1];
 
 	for (var row in board) {
-		var $row = $('<tr>', {});
+		var $row = $('<div>', {});
 		for (var tile_num in board[row]) {
 			var $tile = board_tiles[board[row][tile_num]].clone();
-			var $cell = $('<td>', {});
+			var $cell = $('<div>', {});
 			$cell.append($tile);
 			$row.append($cell);
 		}

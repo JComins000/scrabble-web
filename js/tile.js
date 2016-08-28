@@ -6,20 +6,20 @@ $(function() {
         113, 186, 187, 188, 189, 190, 191, 192, 219, 220, 221, 222];
     var keys = arrow_keys.concat(other_keys).concat(numbers);
     $('input').bind('focus_left', function () {
-        $(this).parent().prev('td').children().first().focus();
+        $(this).parent().prev('div').children().first().focus();
     });
     $('input').bind('focus_right', function () {
-        $(this).parent().next('td').children().first().focus();
+        $(this).parent().next('div').children().first().focus();
     });
     $('input').bind('focus_down', function () {
         $this = $(this);
         var cellIndex = $this.parent().index();
-        $this.closest('tr').next().children().eq(cellIndex).children().first().focus();
+        $this.parent().parent().next().children().eq(cellIndex).children().first().focus();
     });
     $('input').bind('focus_up', function () {
         $this = $(this);
         var cellIndex = $this.parent().index();
-        $this.closest('tr').prev().children().eq(cellIndex).children().first().focus();
+        $this.parent().parent().prev().children().eq(cellIndex).children().first().focus();
    });
     $('.tile').keydown(function (e) {
         if (e.which == 8) {
